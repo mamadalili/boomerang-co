@@ -1,0 +1,19 @@
+{
+  "name": "boomerang-presentation-catalogue",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Static multilingual presentation and catalogue website for Boomerang.",
+  "scripts": {
+    "serve": "npx http-server . -p 8080 -c-1",
+    "check:js": "node --check js/main.js",
+    "images": "python scripts/process-product-images.py"
+  },
+  "keywords": [
+    "boomerang",
+    "catalogue",
+    "presentation",
+    "static-site",
+    "multilingual"
+  ],
+  "license": "UNLICENSED"
+}

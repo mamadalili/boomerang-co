@@ -1,0 +1,25 @@
+# System files
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# Editor folders
+.vscode/
+.idea/
+
+# Logs
+*.log
+npm-debug.log*
+
+# Dependencies and build output
+node_modules/
+dist/
+build/
+outputs/
+
+# Raw source photography is kept locally; optimized web assets live in assets/images/
+assets/Product/
+
+# Local environment files
+.env
+.env.*
