@@ -5,13 +5,17 @@ A static multilingual presentation and catalogue website for Boomerang sanitary 
 ## Pages
 
 - `index.html` - home page
-- `basin.html` - wash basins category
+- `washbasins.html` - wash basins category
 - `faucets.html` - faucets category
-- `wallhung.html` - wall-hung toilets category
+- `mirrors.html` - mirrors category
+- `vanity.html` - vanity units category
+- `shelves.html` - shelves category
 - `accessories.html` - accessories category
 - `about.html` - about us
 - `contact.html` - contact us
 - `blogs.html` - blog listing
+
+`basin.html` and `wallhung.html` are legacy redirects (to `washbasins.html` and `index.html#categories`) kept for old links.
 
 ## Languages
 
