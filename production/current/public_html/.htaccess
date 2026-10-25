@@ -1,0 +1,42 @@
+Options -Indexes
+DirectoryIndex index.html
+<IfModule mod_rewrite.c>
+RewriteEngine On
+# Owner-withdrawn duplicate; original data and media retained.
+RewriteRule ^(?:fa|en|ar|ru)/products/genova-60(?:/.*)?$ - [R=410,L]
+
+# Owner-authorized photo-less drafts; data retained in Master.
+RewriteRule ^(?:fa|en|ar|ru)/products/(?:201|aragonite-4pc|aster-50-washbasin|aster-60-washbasin|aster-70-washbasin|elganza-100-washbasin|glory-washbasin|leona-65-wave|lime-4pc|luminous-washbasin|mirror-box-asteria|mirror-box-laris|mirror-box-master|mirror-box-rojina-50-wave|mirror-box-unique-50|mirror-box-unique-70|mirror-caprice-white|mirror-fonsi-80-touch|mirror-lisano-40|mirror-murano-100-touch|mirror-rojina-70-wave|mirror-spark-45|mirror-victoria-70-touch|mirror-viton-60-touch|mirror-viton-63-motion|mirror-viton-65|mirror-viton-80-touch|shelf-wave)(?:/.*)?$ - [R=404,L]
+
+RewriteCond %{HTTP_HOST} !^www\.boomerang-co\.com$ [NC,OR]
+RewriteCond %{HTTPS} !=on
+RewriteRule ^ https://www.boomerang-co.com%{REQUEST_URI} [R=301,L,NE]
+RewriteRule ^$ /en/ [R=301,L]
+RewriteRule ^api/inquiries/?$ api/inquiries.php [END]
+RewriteRule (^|/)(\.git|\.env|__ops|__staging-status|__design|__product-preview|inquiries|reviews|artifacts|releases|scripts|tests|data|logs)(/|$) - [R=404,L]
+</IfModule>
+<FilesMatch "(^\.|\.(?:log|ndjson|sqlite|bak|sql|zip)$)">
+Require all denied
+</FilesMatch>
+ErrorDocument 404 /en/404.html
+<IfModule mod_headers.c>
+Header always set X-Content-Type-Options "nosniff"
+Header always set Referrer-Policy "strict-origin-when-cross-origin"
+Header always set Permissions-Policy "camera=(), microphone=(), geolocation=()"
+Header always set X-Frame-Options "SAMEORIGIN"
+<FilesMatch "\.html$">
+Header set Cache-Control "no-cache"
+</FilesMatch>
+</IfModule>
+<IfModule mod_deflate.c>
+AddOutputFilterByType DEFLATE text/html text/css application/javascript application/json image/svg+xml
+</IfModule>
+<IfModule mod_expires.c>
+ExpiresActive On
+ExpiresByType image/webp "access plus 30 days"
+ExpiresByType image/jpeg "access plus 30 days"
+ExpiresByType image/png "access plus 30 days"
+ExpiresByType font/woff2 "access plus 1 year"
+ExpiresByType text/css "access plus 1 day"
+ExpiresByType application/javascript "access plus 1 day"
+</IfModule>
