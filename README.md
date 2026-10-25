@@ -1,53 +1,79 @@
-# Boomerang Presentation Catalogue
+# Boomerang International Catalogue
 
-A static multilingual presentation and catalogue website for Boomerang sanitary ware products.
+نسخهٔ عمومی کاتالوگ بین‌المللی بومرنگ با چهار زبان مستقل فارسی، انگلیسی، عربی و روسی. سایت برای معرفی و استعلام محصولات است؛ **قیمت عمومی، سبد خرید، پرداخت و checkout ندارد.**
 
-## Pages
+## نسخهٔ پشتیبان فعلی
 
-- `index.html` - home page
-- `washbasins.html` - wash basins category
-- `faucets.html` - faucets category
-- `mirrors.html` - mirrors category
-- `vanity.html` - vanity units category
-- `shelves.html` - shelves category
-- `accessories.html` - accessories category
-- `about.html` - about us
-- `contact.html` - contact us
-- `blogs.html` - blog listing
+خروجی عمومیِ تأییدشده در این مسیر نگهداری می‌شود:
 
-`basin.html` and `wallhung.html` are legacy redirects (to `washbasins.html` and `index.html#categories`) kept for old links.
+- `production/current/public_html/`
+- مبنا: خروجی منتشرشدهٔ `CONTACT-TEAM-20261025`
+- ۸۲۰ مسیر HTML و ۵٬۵۰۸ فایل وب
+- شامل صفحه‌ها، تصاویر و فایل‌های لازم برای میزبانی است.
+- فارسی `noindex, follow` است؛ EN / AR / RU قابل ایندکس‌اند.
+- فایل‌های Master داخلی، گزارش‌های عملیاتی، رمزها و داده‌های ذخیره‌شدهٔ استعلام در این پشتیبان نیستند.
 
-## Languages
+این پوشه **خروجی آمادهٔ میزبانی** است، نه پروژهٔ مولد کامل. فایل‌های HTML آن را دستی ویرایش نکن؛ تغییر پایدار باید در منبع مربوط اعمال و سپس خروجی تازه ساخته شود.
 
-The site supports:
+## بهینه‌سازی‌های حاضر در سایت
 
-- Farsi
-- English
-- Arabic
-- Russian
+- تصاویر محصول با اندازه و نسخهٔ مناسب نمایش، نسبت تصویر و بارگذاری تدریجی برای محتوای پایین صفحه.
+- گالری محصول با تصویر اصلی و بندانگشتی‌ها؛ از دانلود اولیهٔ همهٔ تصاویر بزرگ جلوگیری می‌شود.
+- هیروی ویدیویی تمام‌عرض با پخش رفت‌وبرگشتی.
+- کارت‌ها و فیلترهای فشرده‌تر برای موبایل، دسته‌بندی‌های هم‌تراز و زمینهٔ سفید کارت محصول.
+- نوار دسته‌بندی دسکتاپ با hover و منوی لمسی برای موبایل.
+- محصولات مرتبط و سایر محصولات به‌شکل کاروسل.
+- صفحات مستقل FA / EN / AR / RU با جهت درست RTL و LTR.
+- فرم استعلام بدون قیمت و پرداخت؛ اطلاعات درخواست در مخزن عمومی GitHub ذخیره نمی‌شود.
 
-Language text is managed in `js/main.js`.
+## ساختار مخزن
 
-## Assets
+- `production/current/public_html/` — نسخهٔ پشتیبان عمومیِ میزبانی
+- `fa/`, `en/`, `ar/`, `ru/` — صفحه‌های چندزبانه در خروجی سایت
+- `assets/` — تصاویر، فونت‌ها، CSS و JavaScript عمومی
+- `api/inquiries.php` در خروجی — نقطهٔ ورود فرم؛ تنظیمات محرمانه و محل نگهداری درخواست‌ها باید خارج از مخزن عمومی بمانند.
 
-Put catalogue images in:
+## نگهداری پشتیبان GitHub
 
-- `assets/images`
+برای تغییرات آینده، GitHub را نسخهٔ قابل‌ردیابی پروژه نگه دار:
 
-Put the logo in:
+1. پیش از تغییر سایت، از نسخهٔ فعلی یک پشتیبان بگیر.
+2. تغییر را در شاخهٔ جدید اعمال و فقط فایل‌های مربوط به همان تغییر را ثبت کن.
+3. صفحه‌ها، تصاویر، لینک‌ها و سیاست ایندکس را بررسی کن.
+4. تغییر را commit و push کن؛ سپس Pull Request را بازبینی و ادغام کن.
+5. از نسخهٔ ادغام‌شده برای انتشار هاست استفاده کن و نتیجه را دوباره بررسی کن.
 
-- `assets/logo`
+دستورهای پایه در ویندوز:
 
-The current files use placeholder SVG assets so the website works immediately. Replace those files with your final product photos, banners, project images, and logo when ready.
-
-## Run
-
-Open `index.html` directly in a browser.
-
-For a local server, run:
-
-```bash
-npm run serve
+```powershell
+git pull --ff-only origin main
+git switch -c site-update-YYYYMMDD
+# فایل‌های مربوط را تغییر بده و بازبینی کن
+git add -- production/current/public_html
+git commit -m "chore(site): describe the update"
+git push -u origin site-update-YYYYMMDD
 ```
 
-Then open the local address shown in the terminal.
+فایل‌های حساس، فایل‌های درخواست استعلام، بکاپ‌های خصوصی، Master تجاری و فایل‌های خامی را که برای انتشار عمومی نیستند وارد commit نکن.
+
+## هماهنگی با سایت زنده
+
+در حال حاضر اتصال خودکار cPanel به GitHub تنظیم نشده است. بنابراین:
+
+- تغییر GitHub به‌تنهایی سایت زنده را عوض نمی‌کند.
+- ویرایش مستقیم در cPanel هم خودکار به GitHub برنمی‌گردد.
+- تا وقتی اتصال امن هاست و فرایند انتشار تنظیم نشده، پس از هر ویرایش cPanel باید نسخهٔ نهایی را از هاست دریافت، پس از بررسی در `production/current/public_html/` جایگزین و commit/push کرد.
+- برای همگام‌سازی خودکار، بعداً باید cPanel Git Version Control یا یک فرایند استقرار امن با دسترسی محدود تنظیم شود. رمز یا کلید دسترسی نباید داخل README یا خود مخزن قرار گیرد.
+
+این README و snapshot مخزن، سایت زنده را منتشر یا تغییر نمی‌دهند.
+
+## اجرای محلی
+
+برای مشاهدهٔ فایل‌های snapshot، `production/current/public_html/index.html` را با یک وب‌سرور استاتیک اجرا کن. اجرای سادهٔ پوشهٔ snapshot:
+
+```powershell
+cd production/current/public_html
+python -m http.server 8080
+```
+
+سپس `http://127.0.0.1:8080/` را باز کن.
