@@ -1,0 +1,41 @@
+/* Owner-provided staff cards: isolated from catalogue and inquiry styling. */
+.design-contact-team { max-width: 1100px; padding-block: 12px 44px; }
+.contact-team-heading { margin-block-end: 22px; max-width: 750px; }
+.contact-team-heading h2 { margin: 0 0 10px; font-size: clamp(24px, 2.4vw, 34px); line-height: 1.35; letter-spacing: -.025em; }
+.contact-team-heading > p { margin: 0; color: #596574; font-size: 14px; line-height: 1.8; }
+.contact-team-grid { display: flex; flex-wrap: wrap; justify-content: center; gap: 16px; }
+.design-contact-team .contact-person { box-sizing: border-box; flex: 0 1 calc((100% - 32px) / 3); min-width: 0; margin: 0; padding: 22px; display: flex; flex-direction: column; background: #fff; border: 1px solid #dfe4eb; border-radius: 16px; box-shadow: 0 8px 24px rgb(24 35 48 / 3%); transition: border-color .18s ease, box-shadow .18s ease; }
+.design-contact-team .contact-person:hover { border-color: #aeb8c5; box-shadow: 0 10px 28px rgb(24 35 48 / 6%); }
+.contact-person-heading { min-height: 70px; padding-block-end: 16px; border-block-end: 1px solid #edf0f4; }
+.contact-person-heading > p { margin: 0 0 7px; color: #bb1235; font-size: 12px; font-weight: 600; line-height: 1.5; }
+.contact-person-heading h3 { margin: 0; color: #20262d; font-size: 20px; font-weight: 650; line-height: 1.35; text-align: start; unicode-bidi: isolate; }
+html[dir="rtl"] .contact-person-heading h3 { text-align: right; }
+.contact-person-details { flex: 1; min-height: 79px; padding-block: 16px; display: flex; flex-direction: column; gap: 11px; }
+.contact-person-details > div { min-width: 0; display: flex; align-items: center; gap: 10px; color: #637082; }
+.contact-person-details a { min-width: 0; color: #354253; font-size: 13.5px; line-height: 1.55; overflow-wrap: anywhere; text-decoration: none; unicode-bidi: isolate; }
+.contact-person-details a:hover { color: #bd1237; text-decoration: underline; text-underline-offset: 4px; }
+.contact-icon { display: block; flex: 0 0 18px; }
+.contact-person-actions { display: flex; gap: 9px; }
+.contact-person-actions .contact-action { box-sizing: border-box; min-width: 0; min-height: 44px; flex: 1 1 0; display: inline-flex; justify-content: center; align-items: center; gap: 8px; padding: 9px 10px; border: 1px solid #dce2e9; border-radius: 9px; background: #fff; color: #28333f; font-size: 13px; font-weight: 550; line-height: 1.5; text-align: center; text-decoration: none; }
+.contact-person-actions .contact-action:hover { border-color: #9eaaba; background: #f7f9fb; }
+.contact-person-actions .contact-action-whatsapp { color: #176b4d; border-color: #c5dfd4; }
+.contact-person-actions .contact-action-whatsapp:hover { color: #115139; border-color: #87baa4; background: #f3faf6; }
+.design-contact-team a:focus-visible { outline: 2px solid #d0153b; outline-offset: 4px; }
+@media (max-width: 1000px) {
+  .design-contact-team .contact-person { flex-basis: calc((100% - 16px) / 2); }
+}
+@media (max-width: 600px) {
+  .design-contact-team { padding-block: 4px 28px; }
+  .contact-team-heading { margin-block-end: 16px; }
+  .contact-team-heading h2 { font-size: 25px; }
+  .contact-team-heading > p { font-size: 13px; }
+  .contact-team-grid { gap: 12px; }
+  .design-contact-team .contact-person { flex-basis: 100%; padding: 18px; border-radius: 14px; }
+  .contact-person-heading { min-height: 0; padding-block-end: 13px; }
+  .contact-person-heading h3 { font-size: 19px; }
+  .contact-person-details { min-height: 78px; padding-block: 13px; gap: 8px; }
+  .contact-person-details a { font-size: 14px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .design-contact-team .contact-person { transition: none; }
+}
