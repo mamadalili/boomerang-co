@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900">
+  <defs><linearGradient id="g" x1="0" x2="1"><stop stop-color="#20342d"/><stop offset=".55" stop-color="#d7d1c5"/><stop offset="1" stop-color="#b8654b"/></linearGradient></defs>
+  <rect width="1600" height="900" fill="url(#g)"/>
+  <rect x="840" y="160" width="430" height="560" rx="14" fill="#f8f6ef" opacity=".88"/>
+  <ellipse cx="1055" cy="365" rx="190" ry="78" fill="#ffffff"/>
+  <rect x="1010" y="390" width="90" height="210" rx="18" fill="#e8e0d4"/>
+  <path d="M260 690c260-110 500-110 720 0" fill="none" stroke="#fff" stroke-width="18" opacity=".42"/>
+  <text x="120" y="190" fill="#fff" font-family="Arial" font-size="76" font-weight="700">Boomerang</text>
+</svg>

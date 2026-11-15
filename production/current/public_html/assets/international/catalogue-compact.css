@@ -1,0 +1,72 @@
+/* Approved shared catalogue refinements. No changes to imagery or product facts. */
+.international-design .design-card{display:flex;flex-direction:column;min-width:0;background:#fff;border:0;border-radius:8px;overflow:hidden;box-shadow:none}
+.international-design .design-card-stage,.international-design .design-card-stage img,.international-design .design-card-copy{background:#fff}
+.international-design .design-card-stage img{mix-blend-mode:normal}
+.international-design .design-card-copy{display:flex;flex-direction:column;flex:1;min-width:0;padding:12px}
+.international-design .design-card-category{margin-bottom:5px!important}
+.international-design .design-card h3{margin-bottom:10px;overflow-wrap:anywhere}
+.international-design .design-card-specs{display:grid;gap:5px;margin:0 0 10px;font-size:12px;line-height:1.5}
+.international-design .design-card-specs>div{display:grid;grid-template-columns:auto minmax(0,1fr);gap:8px;align-items:start;min-width:0}
+.international-design .design-card-specs dt{color:var(--muted);font-weight:400}
+.international-design .design-card-specs dd{margin:0;text-align:end;overflow-wrap:anywhere;unicode-bidi:plaintext}
+.international-design .design-card-bottom{justify-content:space-between;flex-wrap:nowrap;gap:8px;padding-top:6px;margin-top:auto}
+.international-design .design-card-bottom>a{display:inline-flex;justify-content:center;align-items:center;min-width:44px;min-height:44px;flex-shrink:0}
+.international-design .design-compare{min-height:44px;flex-basis:auto}
+.international-design .design-quick{min-height:44px}
+.international-design .design-category-hero figure{background:#fff}
+.international-design .catalogue-tools{padding-block:12px;margin-bottom:12px}
+.international-design .filter-form{display:flex;flex-wrap:wrap;gap:12px;align-items:end}
+.international-design .filter-form>label{flex:1 1 160px;min-width:0}
+.international-design .filter-form label{margin:0;gap:4px;font-size:11px;line-height:1.4}
+.international-design .catalogue-search-row{display:flex;align-items:end;flex:2 1 310px;gap:8px;min-width:0}
+.international-design .catalogue-search-row .catalogue-search{display:block;flex:1;min-width:0}
+.international-design .filter-form input,.international-design .filter-form select{height:44px;min-height:44px;max-width:100%;padding:8px 10px;border:1px solid var(--line);border-radius:6px;background:#fff;line-height:1.3}
+.international-design .filter-form input[type=search]{font-size:16px}
+.international-design .catalogue-search-row .filter-actions{padding:0;flex:none;min-width:0}
+.international-design .filter-form .quiet-button{min-height:44px;padding:8px 10px;border:0;border-radius:6px;font-size:11px;white-space:nowrap;background:transparent}
+@media(max-width:700px){
+ .international-design .design-category-hero{grid-template-columns:1fr;gap:8px;min-height:0;padding-block:12px;align-content:start}
+ .international-design .design-category-hero .breadcrumb{margin:0 0 10px;font-size:10px;line-height:1.5}
+ .international-design .design-category-hero .design-kicker{margin-bottom:6px;font-size:9px}
+ .international-design .design-category-hero h1{font-size:30px;line-height:1.2;margin:0}
+ .international-design .design-category-hero figure{height:88px;aspect-ratio:auto}
+ .international-design .catalogue-tools{padding-block:10px;margin-bottom:12px}
+ .international-design .filter-form{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}
+ .international-design .catalogue-search-row{grid-column:1/-1;gap:8px}
+ .international-design .filter-form>label:first-child{grid-column:auto}
+ .international-design .filter-form select{font-size:16px}
+ .international-design .design-product-grid{gap:14px 10px}
+ .international-design .design-card-stage{aspect-ratio:1}
+ .international-design .design-card-stage img{padding:6px}
+ .international-design .design-card-copy{padding:9px}
+ .international-design .design-card h3{font-size:14px;line-height:1.4;margin-bottom:8px}
+ .international-design .design-card-specs{gap:4px;font-size:11px;line-height:1.45;margin-bottom:8px}
+ .international-design .design-card-specs>div{gap:5px}
+ .international-design .design-card-bottom{gap:4px}
+ .international-design .design-compare{font-size:10px;gap:4px}
+ .international-design .design-quick{bottom:6px;inset-inline-end:6px;padding:5px 8px;font-size:10px}
+}
+
+/* Shared vector arrows and quiet, paired carousel controls. */
+.international-design{
+ --bm-link-icon:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M6 18 18 6M7 6h11v11' fill='none' stroke='black' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+ --bm-chevron-icon:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='m14 6-6 6 6 6' fill='none' stroke='black' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E")
+}
+.international-design .link-arrow{display:inline-grid;place-items:center;flex:none;width:18px;height:18px;font-size:0!important;line-height:0;vertical-align:middle}
+.international-design .link-arrow::before{content:"";display:block;width:18px;height:18px;background:currentColor;-webkit-mask:var(--bm-link-icon) center/contain no-repeat;mask:var(--bm-link-icon) center/contain no-repeat}
+.international-design .design-header .design-contact{min-height:40px;gap:8px;padding:8px 12px;border:1px solid #dce2e9;border-radius:12px;background:#fff;color:var(--red);font-size:12px;line-height:1.4;white-space:nowrap;transition:border-color .18s ease,background .18s ease}
+.international-design .design-header .design-contact:hover{border-color:#d1a6b0;background:#fff8fa}
+.international-design .design-header .design-contact:focus-visible{outline:2px solid var(--red);outline-offset:3px}
+.international-design .design-carousel-buttons{display:inline-flex;align-items:center;gap:2px;padding:2px;border:1px solid #dce2e9;border-radius:13px;background:#fff;box-shadow:none}
+.international-design .design-carousel-buttons button{display:grid;place-items:center;flex:none;width:44px;height:44px;min-width:44px;min-height:44px;margin:0;padding:0;border:0;border-radius:9px;background:transparent;color:var(--ink);line-height:1;touch-action:manipulation;transition:background .15s ease,color .15s ease}
+.international-design .design-carousel-buttons button>span{display:grid;place-items:center;width:18px;height:18px;font-size:0!important;line-height:0}
+.international-design .design-carousel-buttons button>span::before{content:"";display:block;width:18px;height:18px;background:currentColor;-webkit-mask:var(--bm-chevron-icon) center/contain no-repeat;mask:var(--bm-chevron-icon) center/contain no-repeat}
+.international-design .design-carousel-buttons [data-carousel-next]>span::before{transform:scaleX(-1)}
+.international-design .design-carousel-buttons button:hover:not(:disabled){background:#eef2f6;color:var(--red)}
+.international-design .design-carousel-buttons button:disabled{border:0;background:transparent;color:#a6afbc;opacity:.5;cursor:default}
+.international-design .design-carousel-buttons button:focus-visible{outline:2px solid var(--red);outline-offset:-2px}
+.international-design .design-carousel-progress{height:2px;margin-top:12px;border-radius:999px;overflow:hidden;background:#e0e6ed}
+.international-design .design-carousel-progress>span{border-radius:inherit}
+@media(prefers-reduced-motion:reduce){
+ .international-design .design-header .design-contact,.international-design .design-carousel-buttons button,.international-design .design-carousel-progress>span{transition:none}
+}
